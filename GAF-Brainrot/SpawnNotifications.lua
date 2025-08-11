@@ -45,7 +45,7 @@ game:GetService("Workspace").Brainrots.ChildAdded:Connect(function(child)
     local pet_rarity = billboard:WaitForChild("Rarity").Text
     local pet_tier = billboard:WaitForChild("Tier").Text
 
-    if table.find(WantedPet, pet_name) then
+    if WantedPet == pet_name then
         local WebhookInfo = WH_Creator(pet_name, pet_tier, pet_rarity, DiscordID)
         request({
             Url = Webhook,
